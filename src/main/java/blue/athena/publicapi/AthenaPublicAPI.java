@@ -57,7 +57,7 @@ public final class AthenaPublicAPI {
 
                 try {
 
-                    if (clazz == AthenaCommand.class) {
+                    if (AthenaCommand.class.isAssignableFrom(clazz)) {
 
                         Object instance = clazz.newInstance();
                         AthenaCommand command = (AthenaCommand) instance;
