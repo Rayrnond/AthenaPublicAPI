@@ -98,7 +98,7 @@ public final class AthenaPublicAPI {
         int listeners = 0;
         for (Class<?> clazz : listenerClasses) {
 
-            if (clazz.isAssignableFrom(Listener.class)) {
+            if (Listener.class.isAssignableFrom(clazz)) {
 
                 try {
                     Bukkit.getPluginManager().registerEvents((Listener) clazz.newInstance(), getPlugin());
