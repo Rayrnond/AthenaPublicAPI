@@ -162,7 +162,7 @@ public abstract class AthenaCommand extends Command {
         } catch (InvocationTargetException | IllegalAccessException e) {
 
             AthenaString.console("&cCould not invoke subcommand method. Printing stacktrace.");
-            e.printStackTrace();
+            e.getCause().printStackTrace();
 
         }
 
